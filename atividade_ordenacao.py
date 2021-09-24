@@ -5,7 +5,7 @@
 
 
 """
-ATENÇÃO: nesta AC estão proibidos comandos como: sort(), sorted(), list(), e similares.
+ATENÇÃO: nesta AC estão proibidos comandos como: funções especificadas na explicação do classroom e similares.
 Você deve construir as funções solicitadas sem fazer uso de funções auxiliares do Python.
 Também não reaproveite as funções da atividade.
 
@@ -30,7 +30,14 @@ def esta_ordenada(lista):
 	dois a dois: L[0] com L[1], depois L[1] com L[2], depois L[2] com L[3], e assim
 	por diante!
 	"""
-	pass
+	cont = 0
+	for i in range(1, len(lista)):
+		if (lista[i - 1] < lista[i]) or (lista[i - 1] == lista[i]):
+			cont += 1
+		else:
+			return False
+	if cont == (len(lista) - 1):
+		return True
 
 
 def ordenacao_bolha(lista):
